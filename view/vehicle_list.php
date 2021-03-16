@@ -19,7 +19,7 @@
     <tr>
         <td class="sort-menus">
             <form action="." method="get">
-                <input type="hidden" name="action" value="sort_by_make">
+                <input type="hidden" name="action" value="get_vehicles_by_make">
                 <select name="vehicle_id" required>
                     <option value="0">--Display by Make--</option>
                     <?php foreach($vehicles as $vehicle) : ?>
@@ -37,7 +37,7 @@
         </td>
         <td class="sort-menus">
             <form action="." method="get">
-                <input type="hidden" name="action" value="sort_by_make">
+                <input type="hidden" name="action" value="get_vehicles_by_type">
                 <select name="vehicle_id" required>
                     <option value="0">--Display by Type--</option>
                     <?php foreach($vehicles as $vehicle) : ?>
@@ -55,7 +55,7 @@
         </td>
         <td class="sort-menus">
             <form action="." method="get">
-                <input type="hidden" name="action" value="sort_by_make">
+                <input type="hidden" name="action" value="get_vehicles_by_class">
                 <select name="vehicle_id" required>
                     <option value="0">--Display by Class--</option>
                     <?php foreach($vehicles as $vehicle) : ?>

@@ -1,11 +1,11 @@
 <?php
 function get_vehicles_by_make(){
         global $db;
-        $query = 'SELECT Make FROM makes
+        $query = 'SELECT DISTINCT Make FROM makes
                   ORDER BY ID';
         $statement = $db->prepare($query);
         $statement->execute();
-        $makes = $statement->fetchAll();
+        $makes = $statement->fetch();
         $statement->closeCursor();
         return $makes;
     }
@@ -16,7 +16,7 @@ function get_vehicle_make($make_id) {
         return "All Vehicles";
     }
     global $db;
-    $query = 'SELECT * FROM makes
+    $query = 'SELECT DISTINCT * FROM makes
                 WHERE ID = :make_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':make_id', $make_id);
